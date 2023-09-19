@@ -1,0 +1,55 @@
+/* Reset default margins and paddings */
+body, h1, p, button, div {
+    margin: 0;
+    padding: 0;
+}
+
+/* Center content vertically and horizontally */
+:host {
+    font-family: 'Comic Sans MS', cursive;
+    background-color: #fff5e1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    min-height: 100vh;
+}
+
+/* Style the container for content */
+.container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 40px; /* Increased padding */
+    max-width: 800px; /* Increased max-width */
+    width: 100%;
+}
+
+h1 {
+    font-size: 72px; /* Increased font size */
+    margin-bottom: 40px; /* Increased margin */
+    color: #ff6f61;
+}
+
+.joke {
+    font-size: 48px; /* Increased font size */
+    margin-bottom: 40px; /* Increased margin */
+    color: #333;
+}
+
+button {
+    font-family: 'Comic Sans MS', cursive;
+    font-size: 40px; /* Increased font size */
+    padding: 20px 40px; /* Increased padding */
+    background-color: #ff6f61;
+    color: #fff;
+    border: none;
+    border-radius: 10px; /* Increased border-radius */
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #ff453a;
+}
