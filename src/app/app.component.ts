@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { JokegeneratorService } from './joke/jokegenerator.service';
+import { JokesService } from './service/jokes.service';
 
 @Component({
   selector: 'app-root',
@@ -9,12 +9,19 @@ import { JokegeneratorService } from './joke/jokegenerator.service';
 export class AppComponent {
   title = 'randomjokegenerator';
   joke: string = '';
+  category : string = '';
+  
+  
 
-  constructor(private jokeGeneratorService: JokegeneratorService){}
+  constructor(private jokeService: JokesService){}
 
   fetchJoke(): void{
-    this.jokeGeneratorService.getJoke().subscribe((data: any) => {
+    this.jokeService.getJoke().subscribe((data: any) => {
       this.joke = data.joke;
+      this.category = data.category;
+
+      (document.getElementById("category") as HTMLInputElement).innerHTML =`category: ${this.category}`;
     })
   }
 }
+
