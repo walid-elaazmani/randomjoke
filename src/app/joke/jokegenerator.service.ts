@@ -7,7 +7,7 @@ import {HttpClient} from '@angular/common/http'
 })
 export class JokegeneratorService {
 
-  url: string  = 'https://icanhazdadjoke.com'
+  url: string  = 'https://v2.jokeapi.dev/joke/Any?blacklistFlags=religious&type=single'
 
   constructor(private http: HttpClient) { }
 
