@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { JokesService } from './service/jokes.service';
+import { JokegeneratorService } from './joke/jokegenerator.service';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +13,7 @@ export class AppComponent {
   
   
 
-  constructor(private jokeService: JokesService){}
+  constructor(private jokeService: JokegeneratorService){}
 
   fetchJoke(): void{
     this.jokeService.getJoke().subscribe((data: any) => {
